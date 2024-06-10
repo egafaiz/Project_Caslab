@@ -128,7 +128,7 @@ class OnboardingPage extends StatelessWidget {
         margin: const EdgeInsets.all(20.0),
         padding: const EdgeInsets.all(20.0),
         width: 350,
-        height: 470,
+        height: 400, // Reduced height to make space for buttons
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
@@ -142,19 +142,17 @@ class OnboardingPage extends StatelessWidget {
           ],
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween, // Added space between to distribute space
           children: [
-            if (isCentered)
-              Spacer(), 
+            if (isCentered) Spacer(),
             Image.asset(
               imagePath,
               fit: BoxFit.contain,
               width: isCentered ? 200 : 300,
               height: isCentered ? 200 : 300,
             ),
-            if (isCentered)
-              Spacer(), 
-            if (!isCentered)
-              Spacer(), 
+            if (isCentered) Spacer(),
+            Spacer(), 
             Text(
               subtitle.toUpperCase(),
               style: GoogleFonts.poppins(
@@ -164,7 +162,7 @@ class OnboardingPage extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 20), 
+            Spacer(), 
           ],
         ),
       ),

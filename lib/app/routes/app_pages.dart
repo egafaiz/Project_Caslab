@@ -4,6 +4,8 @@ import '../modules/email_otp/bindings/email_otp_binding.dart';
 import '../modules/email_otp/views/email_otp_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/homepage_1/bindings/homepage_1_binding.dart';
+import '../modules/homepage_1/views/homepage_1_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/login_otp/bindings/login_otp_binding.dart';
@@ -79,6 +81,10 @@ class AppPages {
       page: () => const LoginOtpView(),
       binding: LoginOtpBinding(),
     ),
-
+    GetPage(
+      name: _Paths.HOMEPAGE_1,
+      page: () => const Homepage1View(),
+      binding: Homepage1Binding(),
+    ),
   ];
 }

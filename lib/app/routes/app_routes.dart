@@ -12,6 +12,7 @@ abstract class Routes {
   static const SIGNUP_SUCCESS = _Paths.SIGNUP_SUCCESS;
   static const EMAIL_OTP = _Paths.EMAIL_OTP;
   static const LOGIN_OTP = _Paths.LOGIN_OTP;
+  static const HOMEPAGE_1 = _Paths.HOMEPAGE_1;
 }
 
 abstract class _Paths {
@@ -26,4 +27,5 @@ abstract class _Paths {
   static const SIGNUP_SUCCESS = '/signup-success';
   static const EMAIL_OTP = '/email-otp';
   static const LOGIN_OTP = '/login-otp';
+  static const HOMEPAGE_1 = '/homepage-1';
 }
