@@ -47,7 +47,7 @@ class SignupSuccessView extends GetView<SignupSuccessController> {
                 minimumSize: Size(MediaQuery.of(context).size.width * 0.9, 50),
               ),
               onPressed: () {
-                Get.toNamed('/home');
+                Get.toNamed('/homepage-1');
               },
               child: Text(
                 'OKE',
