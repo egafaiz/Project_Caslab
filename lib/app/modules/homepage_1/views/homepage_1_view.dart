@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-
-import '../controllers/homepage_1_controller.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../controllers/homepage_1_controller.dart';
+import '../../profile/views/profile_view.dart'; // Corrected import path
 
 class Homepage1View extends GetView<Homepage1Controller> {
   const Homepage1View({Key? key}) : super(key: key);
@@ -25,8 +24,7 @@ class Homepage1View extends GetView<Homepage1Controller> {
               child: Row(
                 children: [
                   const CircleAvatar(
-                    backgroundImage:
-                        AssetImage('assets/images/Illustration.png'),
+                    backgroundImage: AssetImage('assets/images/Illustration.png'),
                   ),
                   const SizedBox(width: 15),
                   Text(
@@ -73,62 +71,60 @@ class Homepage1View extends GetView<Homepage1Controller> {
           ),
         ),
       ),
-      bottomNavigationBar: _buildBottomNavigationBar(),
+      bottomNavigationBar: buildBottomNavigationBar(),
     );
   }
 
   Widget _buildWalletSection() {
     return Container(
-        padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          color: const Color(0xFF281C9D),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Dompet Saya',
-                  style: GoogleFonts.poppins(color: Colors.white, fontSize: 18),
-                ),
-                const SizedBox(height: 10),
-                Row(
-                  children: [
-                    const Icon(Icons.account_balance_wallet, color: Colors.white),
-                    const SizedBox(width: 10),
-                    Text(
-                      'Tunai',
-                      style: GoogleFonts.poppins(
-                          color: Colors.white, fontSize: 16),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  'Lihat semua',
-                  style: GoogleFonts.poppins(
-                      color: Colors.grey[300], fontSize: 15),
-                ),
-                const SizedBox(height: 20),
-                Text(
-                  'Rp 2.000.000',
-                  style: GoogleFonts.poppins(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: const Color(0xFF281C9D),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Dompet Saya',
+                style: GoogleFonts.poppins(color: Colors.white, fontSize: 18),
+              ),
+              const SizedBox(height: 10),
+              Row(
+                children: [
+                  const Icon(Icons.account_balance_wallet, color: Colors.white),
+                  const SizedBox(width: 10),
+                  Text(
+                    'Tunai',
+                    style: GoogleFonts.poppins(color: Colors.white, fontSize: 16),
                   ),
-                ),
-              ],
-            ),
-          ],
-        ));
+                ],
+              ),
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text(
+                'Lihat semua',
+                style: GoogleFonts.poppins(color: Colors.grey[300], fontSize: 15),
+              ),
+              const SizedBox(height: 20),
+              Text(
+                'Rp 2.000.000',
+                style: GoogleFonts.poppins(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _buildExpenseReportSection() {
@@ -230,8 +226,7 @@ class Homepage1View extends GetView<Homepage1Controller> {
         text,
         style: GoogleFonts.poppins(
           color: isSelected ? const Color(0xFF281C9D) : Colors.white,
-          fontSize: 16,
-        ),
+          fontSize: 16),
       ),
     );
   }
@@ -280,12 +275,9 @@ class Homepage1View extends GetView<Homepage1Controller> {
             ],
           ),
           const SizedBox(height: 10),
-          _buildTransactionItem(
-              'Makanan & Minuman', '28 April 2024', 'Rp 25.000'),
-          _buildTransactionItem(
-              'Kebutuhan Internet', '29 April 2024', 'Rp 50.000'),
-          _buildTransactionItem(
-              'Makanan & Minuman', '29 April 2024', 'Rp 15.000'),
+          _buildTransactionItem('Makanan & Minuman', '28 April 2024', 'Rp 25.000'),
+          _buildTransactionItem('Kebutuhan Internet', '29 April 2024', 'Rp 50.000'),
+          _buildTransactionItem('Makanan & Minuman', '29 April 2024', 'Rp 15.000'),
         ],
       ),
     );
@@ -306,8 +298,7 @@ class Homepage1View extends GetView<Homepage1Controller> {
                   const SizedBox(width: 10),
                   Text(
                     title,
-                    style:
-                        GoogleFonts.poppins(color: Colors.white, fontSize: 15),
+                    style: GoogleFonts.poppins(color: Colors.white, fontSize: 15),
                   ),
                 ],
               ),
@@ -327,7 +318,7 @@ class Homepage1View extends GetView<Homepage1Controller> {
     );
   }
 
-  Widget _buildBottomNavigationBar() {
+  Widget buildBottomNavigationBar() {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -365,7 +356,7 @@ class Homepage1View extends GetView<Homepage1Controller> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home, color: Color(0xFF281C9D)),
-            label: 'Home',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.swap_horiz, color: Colors.grey[400]),
