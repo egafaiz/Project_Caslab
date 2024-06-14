@@ -22,6 +22,8 @@ import '../modules/signup_otp/bindings/signup_otp_binding.dart';
 import '../modules/signup_otp/views/signup_otp_view.dart';
 import '../modules/signup_success/bindings/signup_success_binding.dart';
 import '../modules/signup_success/views/signup_success_view.dart';
+import '../modules/transaction/bindings/transaction_binding.dart';
+import '../modules/transaction/views/transaction_view.dart';
 
 part 'app_routes.dart';
 
@@ -85,6 +87,11 @@ class AppPages {
       name: _Paths.HOMEPAGE_1,
       page: () => const Homepage1View(),
       binding: Homepage1Binding(),
+    ),
+    GetPage(
+      name: _Paths.TRANSACTION,
+      page: () => const TransactionView(),
+      binding: TransactionBinding(),
     ),
   ];
 }
