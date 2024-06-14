@@ -23,6 +23,7 @@ abstract class Routes {
   static const SETTING_PAGE = _Paths.SETTING_PAGE;
   static const TRANSACTION = _Paths.TRANSACTION;
   static const ANGGARAN = _Paths.ANGGARAN;
+  static const TRANSAKSI_BARU = _Paths.TRANSAKSI_BARU;
 }
 
 abstract class _Paths {
@@ -48,4 +49,5 @@ abstract class _Paths {
   static const SETTING_PAGE = '/setting-page';
   static const TRANSACTION = '/transaction';
   static const ANGGARAN = '/anggaran';
+  static const TRANSAKSI_BARU = '/transaksi-baru';
 }

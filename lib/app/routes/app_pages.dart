@@ -43,6 +43,8 @@ import '../modules/signup_success/bindings/signup_success_binding.dart';
 import '../modules/signup_success/views/signup_success_view.dart';
 import '../modules/transaction/bindings/transaction_binding.dart';
 import '../modules/transaction/views/transaction_view.dart';
+import '../modules/transaksi_baru/bindings/transaksi_baru_binding.dart';
+import '../modules/transaksi_baru/views/transaksi_baru_view.dart';
 
 part 'app_routes.dart';
 
@@ -156,6 +158,11 @@ class AppPages {
       name: _Paths.ANGGARAN,
       page: () => const AnggaranView(),
       binding: AnggaranBinding(),
+    ),
+    GetPage(
+      name: _Paths.TRANSAKSI_BARU,
+      page: () => const TransaksiBaruView(),
+      binding: TransaksiBaruBinding(),
     ),
   ];
 }
