@@ -13,7 +13,16 @@ abstract class Routes {
   static const EMAIL_OTP = _Paths.EMAIL_OTP;
   static const LOGIN_OTP = _Paths.LOGIN_OTP;
   static const HOMEPAGE_1 = _Paths.HOMEPAGE_1;
+  static const PROFILE = _Paths.PROFILE;
+  static const EDIT_PROFILE = _Paths.EDIT_PROFILE;
+  static const HELP_PAGE = _Paths.HELP_PAGE;
+  static const HELP1 = _Paths.HELP1;
+  static const HELP2 = _Paths.HELP2;
+  static const HELP3 = _Paths.HELP3;
+  static const ABOUT_PAGE = _Paths.ABOUT_PAGE;
+  static const SETTING_PAGE = _Paths.SETTING_PAGE;
   static const TRANSACTION = _Paths.TRANSACTION;
+  static const ANGGARAN = _Paths.ANGGARAN;
 }
 
 abstract class _Paths {
@@ -29,5 +38,14 @@ abstract class _Paths {
   static const EMAIL_OTP = '/email-otp';
   static const LOGIN_OTP = '/login-otp';
   static const HOMEPAGE_1 = '/homepage-1';
+  static const PROFILE = '/profile';
+  static const EDIT_PROFILE = '/edit-profile';
+  static const HELP_PAGE = '/help-page';
+  static const HELP1 = '/help1';
+  static const HELP2 = '/help2';
+  static const HELP3 = '/help3';
+  static const ABOUT_PAGE = '/about-page';
+  static const SETTING_PAGE = '/setting-page';
   static const TRANSACTION = '/transaction';
+  static const ANGGARAN = '/anggaran';
 }

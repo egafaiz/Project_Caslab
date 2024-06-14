@@ -197,10 +197,10 @@ class TransactionView extends GetView<TransactionController> {
         onTap: (index) {
           switch (index) {
             case 0:
-              Get.toNamed('/homepage');
+              Get.toNamed('/homepage-1');
               break;
             case 1:
-              Get.toNamed('/transaksi');
+              Get.toNamed('/transaction');
               break;
             case 2:
               Get.toNamed('/transaksi-baru');
@@ -219,7 +219,7 @@ class TransactionView extends GetView<TransactionController> {
             label: '',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.swap_horiz, color: Colors.grey[400]),
+            icon: Icon(Icons.swap_horiz, color: Color(0xFF281C9D)),
             label: '',
           ),
           BottomNavigationBarItem(
@@ -247,8 +247,8 @@ class TransactionView extends GetView<TransactionController> {
             icon: Icon(Icons.account_balance_wallet, color: Colors.grey[400]),
             label: '',
           ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.person, color: Color(0xFF281C9D)),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person, color: Colors.grey[400]),
             label: '',
           ),
         ],
