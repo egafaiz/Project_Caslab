@@ -5,6 +5,8 @@ import '../modules/about_page/bindings/about_page_binding.dart';
 import '../modules/about_page/views/about_page_view.dart';
 import '../modules/anggaran/bindings/anggaran_binding.dart';
 import '../modules/anggaran/views/anggaran_view.dart';
+import '../modules/dompet_saya/bindings/dompet_saya_binding.dart';
+import '../modules/dompet_saya/views/dompet_saya_view.dart';
 import '../modules/edit_profile/bindings/edit_profile_binding.dart';
 import '../modules/edit_profile/views/edit_profile_view.dart';
 import '../modules/email_otp/bindings/email_otp_binding.dart';
@@ -163,6 +165,11 @@ class AppPages {
       name: _Paths.TRANSAKSI_BARU,
       page: () => const TransaksiBaruView(),
       binding: TransaksiBaruBinding(),
+    ),
+    GetPage(
+      name: _Paths.DOMPET_SAYA,
+      page: () => const DompetSayaView(),
+      binding: DompetSayaBinding(),
     ),
   ];
 }
