@@ -10,8 +10,10 @@ class TransaksiBaruView extends GetView<TransaksiBaruController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Transaksi Baru', style: GoogleFonts.poppins()),
+        title: Text('Transaksi Baru',
+            style: GoogleFonts.poppins(color: Colors.white)),
         backgroundColor: const Color(0xFF281C9D),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -19,10 +21,15 @@ class TransaksiBaruView extends GetView<TransaksiBaruController> {
           child: Column(
             children: [
               _buildAmountInput(),
+              SizedBox(height: 20),
               _buildCategorySelection(context),
+              SizedBox(height: 20),
               _buildNoteInput(),
+              SizedBox(height: 20),
               _buildDatePicker(context),
+              SizedBox(height: 20),
               _buildWalletSelection(context),
+              SizedBox(height: 20),
               _buildSaveButton(),
             ],
           ),
@@ -75,7 +82,35 @@ class TransaksiBaruView extends GetView<TransaksiBaruController> {
                     Navigator.of(context).pop();
                   },
                 ),
-                // Tambahkan kategori lainnya di sini
+                ListTile(
+                  title: const Text('Transportasi'),
+                  onTap: () {
+                    controller.updateCategory('Transportasi');
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: const Text('Belanja'),
+                  onTap: () {
+                    controller.updateCategory('Belanja');
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: const Text('Hiburan'),
+                  onTap: () {
+                    controller.updateCategory('Hiburan');
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: const Text('Kesehatan'),
+                  onTap: () {
+                    controller.updateCategory('Kesehatan');
+                    Navigator.of(context).pop();
+                  },
+                ),
+                // Add more category options here if needed
               ],
             ),
           ),
@@ -147,7 +182,21 @@ class TransaksiBaruView extends GetView<TransaksiBaruController> {
                     Navigator.of(context).pop();
                   },
                 ),
-                // Tambahkan pilihan dompet lainnya di sini
+                ListTile(
+                  title: const Text('Bank'),
+                  onTap: () {
+                    controller.updateWallet('Bank');
+                    Navigator.of(context).pop();
+                  },
+                ),
+                ListTile(
+                  title: const Text('E-Wallet'),
+                  onTap: () {
+                    controller.updateWallet('E-Wallet');
+                    Navigator.of(context).pop();
+                  },
+                ),
+                // Add more wallet options here if needed
               ],
             ),
           ),
@@ -161,7 +210,7 @@ class TransaksiBaruView extends GetView<TransaksiBaruController> {
       onPressed: () {
         // Simpan transaksi
       },
-      child: Text('Simpan', style: GoogleFonts.poppins()),
+      child: Text('Simpan', style: GoogleFonts.poppins(color: Colors.white)),
       style: ElevatedButton.styleFrom(
         backgroundColor: const Color(0xFF281C9D),
       ),
