@@ -25,6 +25,7 @@ abstract class Routes {
   static const ANGGARAN = _Paths.ANGGARAN;
   static const TRANSAKSI_BARU = _Paths.TRANSAKSI_BARU;
   static const DOMPET_SAYA = _Paths.DOMPET_SAYA;
+  static const TAMBAH_DOMPET = _Paths.TAMBAH_DOMPET;
 }
 
 abstract class _Paths {
@@ -52,4 +53,5 @@ abstract class _Paths {
   static const ANGGARAN = '/anggaran';
   static const TRANSAKSI_BARU = '/transaksi-baru';
   static const DOMPET_SAYA = '/dompet-saya';
+  static const TAMBAH_DOMPET = '/tambah-dompet';
 }

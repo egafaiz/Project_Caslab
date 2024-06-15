@@ -43,6 +43,8 @@ import '../modules/signup_otp/bindings/signup_otp_binding.dart';
 import '../modules/signup_otp/views/signup_otp_view.dart';
 import '../modules/signup_success/bindings/signup_success_binding.dart';
 import '../modules/signup_success/views/signup_success_view.dart';
+import '../modules/tambah_dompet/bindings/tambah_dompet_binding.dart';
+import '../modules/tambah_dompet/views/tambah_dompet_view.dart';
 import '../modules/transaction/bindings/transaction_binding.dart';
 import '../modules/transaction/views/transaction_view.dart';
 import '../modules/transaksi_baru/bindings/transaksi_baru_binding.dart';
@@ -170,6 +172,11 @@ class AppPages {
       name: _Paths.DOMPET_SAYA,
       page: () => const DompetSayaView(),
       binding: DompetSayaBinding(),
+    ),
+    GetPage(
+      name: _Paths.TAMBAH_DOMPET,
+      page: () => const TambahDompetView(),
+      binding: TambahDompetBinding(),
     ),
   ];
 }

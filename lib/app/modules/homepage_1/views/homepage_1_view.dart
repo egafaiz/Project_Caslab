@@ -108,9 +108,12 @@ class Homepage1View extends GetView<Homepage1Controller> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Text(
-                'Lihat semua',
-                style: GoogleFonts.poppins(color: Colors.grey[300], fontSize: 15),
+              TextButton(
+                onPressed: () => Get.toNamed('/dompet-saya'),
+                child: Text(
+                  'Lihat semua',
+                  style: GoogleFonts.poppins(color: Colors.grey[300], fontSize: 15),
+                ),
               ),
               const SizedBox(height: 20),
               Text(
